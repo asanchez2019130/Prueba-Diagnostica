@@ -4,113 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 
-<body style="background-color: #e6e6fa; font-family: 'Courier New', Courier, monospace; text-align: center;">
-
-    <section>
-        <div>
-            <nav>
-                <a href="#sobreMi">Sobre Mi</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#Lenguajes">Lenguajes de Programacion</a>
-                <a href="#Multimedia">Multimedia</a>
-                <a href="#FormContact">Contactame</a>
-            </nav>
-        </div>
-    </section>
-
-    <section id="sobreMi">
-        <div class="container" style="background-color: #fdfd96;">
-            <div style="margin-right: 5px; margin-left: 5px;">
-                <h1 style="font-size: 30px; text-align: center;">Sobre mi</h1>
-                <p style="font-size: 20px; text-align: center;">Soy Anderson Uriel Sanchez Rogel curso en 6to Perito en
-                    Computación, soy una
-                    persona la cual me gusta tener mi escritorio libre y mi principal pasatiempo son los videojueos y
-                    escuchar musica
-                    y estoy empezando a ir al gimnasio por salud y desestres, de pequeño estudi en la Casita Benjamin
-                    luego mi primaria la estudie en el Colegio Cristiano Vida ya por desicion propia
-                    me pase a Kinal el cual me encuentro desde 2019 y ya llevo 6 años en kinal y este es mi ultimo año.
-                </p>
-                <div style="text-align: center;">
-                    <img src="Yo.jpg" style="width: 15%; height: 15%;">
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="proyectos">
-        <div class="container" style="background-color: #ff6961;">
-            <h1>Proyectos</h1>
-            <h3>Tony's Kinal</h3>
-            <p>Este proyecto esta basado en un restaurante el cual ofrece distintos platillos y ofrece sus servicion
-                para actividades como buffets, cumpleaños etc. cuenta con un metodo CRUD
-                en el cual nos permite la facilidad de agregar y eliminar datos al igual que nos ofrece la posibilidad
-                de crear una cuenta si no contamos con una y un login.
-            </p>
-
-            <img src="TonysKinal.png" style="width: 30%; height: 30%;">
-
-            <h3>Vanguard Bank</h3>
-            <p>Este proyecto esta echo para un banco en el cual esta diseñado para los clientes y los empleados los
-                cuales los empleados tienen privilejios los cuales son el uso del CRUD
-                y poder ver las actividades de cada usuario, este trabajo fue diseñado con un grupo de trabajo de 11
-                personas las cules cada uno tenia un rol importante en el trabajo.
-            </p>
-            <img src="VanguardBank.png" style="width: 35%; height: 35%;">
-
-        </div>
-    </section>
-
-    <section id="Lenguajes">
-        <div class="container" style="background-color: #77dd77;">
-            <h1>Lenguajes de programacion</h1>
-            <p>Los principales lenguajes de programacion los cuales manejos en un nivel basico es HTML, CSS, JAVA, SQL y
-                el Js no se mucho sobre ese lenguaje pero tengo el conociminto minimo
-                para poder realizar algo en ese lenguajel. <br>
-                En el cual tengo mas experiencia es en SQL.
-            </p>
-
-            <img src="html_js_css_course_img.jpg" style="width: 25%; height: 25%;">
-            <img src="sql_ejercicios.png" style="width: 35%; height: 35%;">
-        </div>
-    </section>
-
-    <section id="Multimedia">
-        <div class="container" style="background-color: #84b6f4; text-align: center;">
-            <h1>My soundtrack Favorito</h1>
-            <img src="TLOU soundtrack.jpeg" style="background-color: #ff6961;">
-            <div>
-                <audio controls src="TLOU.mp3"></audio>
+<body>
+    <div class="texto">
+        <h1>Bienvenido a mi Calculadora</h1>
+    </div>
+    <div class="body">
+        <div class="calculadora">
+            <input type="text" id="pantalla">
+            <div class="botones">
+                <button onclick="agregarCaracter('7')">7</button>
+                <button onclick="agregarCaracter('8')">8</button>
+                <button onclick="agregarCaracter('9')">9</button>
+                <button onclick="agregarCaracter('/')">/</button>
+                <button onclick="agregarCaracter('4')">4</button>
+                <button onclick="agregarCaracter('5')">5</button>
+                <button onclick="agregarCaracter('6')">6</button>
+                <button onclick="agregarCaracter('X')">X</button>
+                <button onclick="agregarCaracter('1')">1</button>
+                <button onclick="agregarCaracter('2')">2</button>
+                <button onclick="agregarCaracter('3')">3</button>
+                <button onclick="agregarCaracter('-')">-</button>
+                <button onclick="agregarCaracter('0')">0</button>
+                <button onclick="agregarCaracter('.')">.</button>
+                <button onclick="agregarCaracter('+')">+</button>
+                <button onclick="calcular()">=</button>
+                <button onclick="limpiarPantalla()">C</button>
             </div>
 
         </div>
-    </section>
+    </div>
 
-    <section id="FormContact">
-        <div class="container" style="background-color: #fdcae1;">
-            <h1>Formulario de Contacto</h1>
 
-            <div>
-                <form action="#" method="post">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+    <div class="copyright" > ©Copyright Anderson Uriel Sanchez Rogel</div>
 
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                    <button type="submit">Enviar Mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
+    <script src="assets/logica.js"></script>
 </body>
 
 </html>
